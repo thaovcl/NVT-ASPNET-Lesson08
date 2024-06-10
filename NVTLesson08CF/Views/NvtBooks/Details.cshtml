@@ -1,0 +1,66 @@
+﻿@model NVTLesson08CF.Models.NvtBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NvtBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GetNvtCategory.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GetNvtCategory.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtPublisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtPublisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtPicture)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NvtBookId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,72 @@
+﻿@model NVTLesson08CF.Models.NvtBook
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NvtBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GetNvtCategory.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GetNvtCategory.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtPublisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtPublisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NvtPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NvtPicture)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

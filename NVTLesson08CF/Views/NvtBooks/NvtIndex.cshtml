@@ -1,0 +1,63 @@
+﻿@model IEnumerable<NVTLesson08CF.Models.NvtBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GetNvtCategory.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtPublisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NvtPicture)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GetNvtCategory.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtPublisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NvtPicture)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NvtBookId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NvtBookId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NvtBookId })
+        </td>
+    </tr>
+}
+
+</table>
